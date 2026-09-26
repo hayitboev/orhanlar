@@ -1,80 +1,34 @@
-# Next.js Проект
+# Orhanlar Dekorasyon website
 
-Этот проект построен с использованием Next.js 13, TypeScript, Tailwind CSS и Radix UI компонентов.
+A Turkish-language website for a renovation and decoration business in Istanbul. Built with **Next.js 13**, **React**, **TypeScript**, and **Tailwind CSS**.
 
-## 🚀 Технологии
+## What the project includes
 
-- **Next.js 13** - React фреймворк
-- **TypeScript** - Типизированный JavaScript
-- **Tailwind CSS** - CSS фреймворк
-- **Radix UI** - Доступные UI компоненты
-- **React Hook Form** - Управление формами
-- **Zod** - Валидация схем
+- Service pages for painting, plasterboard, ceramic tiling, and full renovations
+- A project gallery with a lightbox
+- Responsive navigation and layouts
+- Page-specific metadata for search and social previews
+- A contact page with a form interface
 
-## 📦 Установка
+The project is a website implementation. The gallery currently uses **illustrative Pexels images**, and some business figures and contact details in the source are placeholders. The contact form points to `YOUR_FORMSPREE_ID` and will **not send messages** until a real endpoint is configured. Replace those values with verified business information before deploying for a client.
 
-1. Клонируйте репозиторий:
+## Run locally
+
 ```bash
-git clone <your-repository-url>
-cd project
-```
-
-2. Установите зависимости:
-```bash
-npm install
-```
-
-3. Запустите проект в режиме разработки:
-```bash
+git clone https://github.com/hayitboev/orhanlar.git
+cd orhanlar
+npm ci
 npm run dev
 ```
 
-Откройте [http://localhost:3000](http://localhost:3000) в браузере.
+Open [http://localhost:3000](http://localhost:3000). To check a production build, run `npm run build`.
 
-## 🛠️ Доступные скрипты
+## Structure
 
-- `npm run dev` - Запуск в режиме разработки
-- `npm run build` - Сборка для продакшена
-- `npm run start` - Запуск продакшен сервера
-- `npm run lint` - Проверка кода
+- `app/` — routes, layout, styles, and page metadata
+- `components/` — header, footer, gallery, service cards, and UI components
+- `lib/` and `hooks/` — shared helpers
 
-## 🌐 Деплой
+## Before deployment
 
-### Vercel (Рекомендуется для Next.js)
-
-1. Создайте аккаунт на [Vercel](https://vercel.com)
-2. Подключите ваш GitHub репозиторий
-3. Vercel автоматически определит Next.js проект и настроит деплой
-
-### Netlify
-
-1. Создайте аккаунт на [Netlify](https://netlify.com)
-2. Подключите GitHub репозиторий
-3. Настройте команды сборки:
-   - Build command: `npm run build`
-   - Publish directory: `.next`
-
-### Другие платформы
-
-Проект можно деплоить на любую платформу, которая поддерживает Node.js приложения.
-
-## 📁 Структура проекта
-
-```
-├── app/                 # App Router (Next.js 13)
-├── components/          # Переиспользуемые компоненты
-├── hooks/              # Кастомные React хуки
-├── lib/                # Утилиты и конфигурации
-└── public/             # Статические файлы
-```
-
-## 🤝 Вклад в проект
-
-1. Форкните репозиторий
-2. Создайте ветку для новой функции
-3. Внесите изменения
-4. Создайте Pull Request
-
-## 📄 Лицензия
-
-Этот проект находится под лицензией MIT. 
+Update the contact details and Formspree endpoint in `app/iletisim/page.tsx`, replace illustrative images and unverified project statistics, and check the canonical business URL in `app/layout.tsx`. The repository does not establish that the example projects shown in the gallery are completed client work.
